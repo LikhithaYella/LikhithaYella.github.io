@@ -474,31 +474,52 @@ footer {
 }
 
 /* Ensure a responsive design */
+/* Responsive design for the navbar */
 @media (max-width: 768px) {
-    /* Adjust the navigation bar to collapse or take up less space */
     nav {
-        width: 100%;
-        height: auto;
+        width: 100%;  /* Make the navbar take up the full width on small screens */
+        height: auto; /* Adjust height automatically based on content */
     }
 
-    /* Ensure the text and photo are stacked vertically on smaller screens */
-    .content {
-        flex-direction: column;
-        text-align: center;
+    nav ul {
+        display: flex;
+        flex-direction: column;  /* Stack the menu items vertically */
+        align-items: center;     /* Center the items */
     }
 
-    /* Adjust the size of the image */
-    img {
-        width: 150px; /* or any percentage that works */
-        height: auto;
-    }
-
-    /* Resize fonts and buttons for smaller screens */
-    h1, p, .btn {
-        font-size: 16px; /* or adjust as needed */
-        padding: 10px;
+    nav ul li {
+        margin-bottom: 10px;  /* Add spacing between items */
     }
 }
+
+/* Ensure the content is responsive */
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px; /* Add some padding for spacing */
+    }
+
+    /* Adjust the image size for mobile screens */
+    img {
+        width: 100px; /* Reduce size for smaller screens */
+        height: auto;
+        margin-bottom: 10px; /* Add some space below the image */
+    }
+
+    /* Adjust the font sizes */
+    h1 {
+        font-size: 24px; /* Slightly smaller heading */
+    }
+
+    p, .btn {
+        font-size: 16px;
+    }
+}
+
 
 
 
