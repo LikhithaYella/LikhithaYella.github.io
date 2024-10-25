@@ -472,3 +472,35 @@ footer {
         transform: translateX(0); /* End at original position */
     }
 }
+
+/* Ensure a responsive design */
+@media (max-width: 768px) {
+    /* Adjust the navigation bar to collapse or take up less space */
+    nav {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ensure the text and photo are stacked vertically on smaller screens */
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Adjust the size of the image */
+    img {
+        width: 150px; /* or any percentage that works */
+        height: auto;
+    }
+
+    /* Resize fonts and buttons for smaller screens */
+    h1, p, .btn {
+        font-size: 16px; /* or adjust as needed */
+        padding: 10px;
+    }
+}
+
+
+
+
+
