@@ -13,6 +13,7 @@ body {
     flex-direction: column; 
 }
 
+
 /* Navigation Bar */
 nav {
     display: flex;
@@ -183,6 +184,7 @@ footer {
     }
 }
 
+
 .about {
     padding: 100px 20px;
     display: flex;
@@ -265,6 +267,11 @@ footer {
     margin-bottom: 10px;
 }
 
+
+/* Contact Form Section */
+
+
+
 /* Contact Section */
 .contact-section {
     display: flex;
@@ -297,60 +304,218 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%; /* Full width */
-    padding: 15px;
-    margin-bottom: 15px; /* Spacing between fields */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1em;
+    width: 100%;
+    padding: 12px; /* Slightly larger padding */
+    margin: 10px 0;
+    border: 2px solid #ccc; /* Thicker border */
+    border-radius: 8px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth border color change */
 }
 
-/* Responsive Adjustments */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #06741e; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px; /* Consistent padding */
+    background-color: #067417; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.contact-form button:hover {
+    background-color: #055c0d; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* LinkedIn Card */
+.linkedin-card {
+    background-color: white; /* White background for contrast */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Limit width for better readability */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly lower for slide effect */
+    animation: fadeInUp 1s forwards; /* Fade in and slide up */
+    animation-delay: 0.4s; /* Delay for card animation */
+}
+
+.linkedin-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.linkedin-card h2 {
+    font-size: 1.8em; /* Slightly larger heading */
+    color: #06741e; /* Dark green */
+}
+
+.linkedin-card p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+.linkedin-card a {
+    font-size: 1.2em;
+    color: #0077b5; /* LinkedIn blue */
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #0077b5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+}
+
+.linkedin-card a:hover {
+    background-color: #0077b5; /* LinkedIn blue */
+    color: white; /* Change text color on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1; /* End visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px; /* Padding for spacing */
+    background-color: #f7f7f7; /* Light background color */
+}
+
+.projects-section h2 {
+    font-size: 2.5em;
+    color: #06741e; /* Dark green */
+    margin-bottom: 40px;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+.category {
+    margin-bottom: 40px; /* Space between categories */
+}
+
+.category h3 {
+    font-size: 2em;
+    color: #004d40; /* Teal for category headings */
+    margin-bottom: 20px;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+.project {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px; /* Limit width for better readability */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly lower for slide effect */
+    animation: slideIn 0.5s forwards; /* New slide-in animation */
+}
+
+.project:nth-child(odd) {
+    animation-delay: 0.2s; /* Delay for odd projects */
+}
+
+.project:nth-child(even) {
+    animation-delay: 0.4s; /* Delay for even projects */
+}
+
+.project h4 {
+    color: #06741e; /* Dark green */
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateX(-100%); /* Start from left */
+    }
+    to {
+        opacity: 1; /* End visible */
+        transform: translateX(0); /* End at original position */
+    }
+}
+
+/* Ensure a responsive design */
+/* Responsive design for the navbar */
+/* @media (max-width: 768px) {
+    nav {
+        width: 100%;  /* Make the navbar take up the full width on small screens */
+        height: auto; /* Adjust height automatically based on content */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;  /* Stack the menu items vertically */
+        align-items: center;     /* Center the items */
+    }
+
+    nav ul li {
+        margin-bottom: 10px;  /* Add spacing between items */
+    }
+} */
+
+/* Ensure the content is responsive */
 @media (max-width: 768px) {
-    /* Adjust navigation */
-    nav {
-        width: 250px; /* Reduced width on smaller screens */
-    }
-    
-    /* Change hero section layout */
-    .hero {
-        flex-direction: column; /* Stack elements */
-        height: auto; /* Allow dynamic height */
+    .content {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px; /* Add some padding for spacing */
     }
 
-    .text-container {
-        margin: 20px 0; /* Add margin for spacing */
+    /* Adjust the image size for mobile screens */
+    img {
+        width: 100px; /* Reduce size for smaller screens */
+        height: auto;
+        margin-bottom: 10px; /* Add some space below the image */
     }
 
-    .name {
-        font-size: 2.5em; /* Reduce name font size */
+    /* Adjust the font sizes */
+    h1 {
+        font-size: 24px; /* Slightly smaller heading */
     }
 
-    /* Skills section */
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        width: 100%; /* Full width on very small screens */
-        height: auto; /* Allow dynamic height */
-    }
-    
-    .name {
-        font-size: 2em; /* Further reduce name font size */
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-    }
-
-    .about-box {
-        padding: 20px; /* Reduce padding for small screens */
-    }
-
-    .contact-form {
-        padding: 20px; /* Reduce padding for small screens */
+    p, .btn {
+        font-size: 16px;
     }
 }
