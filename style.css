@@ -1,0 +1,474 @@
+/* Resetting margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("images.jpg");
+    min-height: 100vh; /* Ensures the body covers the full height of the viewport */
+    display: flex; /* Use flexbox for better layout control */
+    flex-direction: column; 
+}
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    flex-direction: column; /* Column layout for vertical alignment */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Aligns the items in the center */
+    padding: 20px;
+    background-color: #004d40; /* Dark teal */
+    height: 100vh; /* Full height */
+    position: fixed;
+    left: 0; /* Fixed to the right */
+    width: 350px; /* Increased width for the navbar */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3); /* Shadow on left side */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+nav .logo {
+    font-size: 1.8em;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 30px; /* Extra space below logo */
+}
+
+nav .nav-links {
+    display: flex;
+    flex-direction: column; /* Vertical layout for links */
+    gap: 20px; /* Space between the links */
+}
+
+nav .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
+
+nav .nav-links a:hover {
+    color: #ffeb3b; /* Bright yellow */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.text-container {
+    max-width: 600px;
+    text-align: center;
+    margin-right: 30px;
+    animation: fadeInLeft 2s ease; /* Text slides in from the left */
+}
+
+.name {
+    font-size: 3em;
+    color: #067417f4;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Box Effect for Each Line */
+.description-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border: 2px solid #067417f4;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInRight 1.5s ease; /* Slides in from the right */
+}
+
+.description-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Container */
+.profile-container {
+    position: relative; /* Necessary for absolute positioning of overlay */
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(3, 93, 30, 0.856);
+    animation: scaleUp 1.5s ease-in-out; /* Scale-up animation on load */
+}
+
+/* Profile Image */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Profile Text */
+.profile-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.profile-container:hover .profile-text {
+    opacity: 1; /* Show text on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d40;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* New Animation for Profile Container */
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.about {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-box {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Maximum width for the box */
+    text-align: center; /* Centered text */
+    animation: fadeInUp 1s ease-in-out; /* Fade and slide up effect */
+}
+
+.about-box h2 {
+    font-size: 2.5em;
+    color: #046b18;
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Starts below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Ends in original position */
+    }
+}
+
+/* Skills Section */
+.skills {
+    background-color: #f7f7f7;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #066d06;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card h3 {
+    font-size: 1.5em;
+    color: #06741e;
+    margin-bottom: 10px;
+}
+
+
+/* Contact Form Section */
+
+
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px; /* Padding for spacing */
+    background-color: #f7f7f7; /* Light background color */
+}
+
+.contact-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly lower for slide effect */
+    animation: fadeInUp 1s forwards; /* Fade in and slide up */
+    animation-delay: 0.2s; /* Delay for form animation */
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #06741e; /* Dark green */
+    margin-bottom: 20px;
+    font-size: 2em; /* Increase heading size */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px; /* Slightly larger padding */
+    margin: 10px 0;
+    border: 2px solid #ccc; /* Thicker border */
+    border-radius: 8px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #06741e; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px; /* Consistent padding */
+    background-color: #067417; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.contact-form button:hover {
+    background-color: #055c0d; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* LinkedIn Card */
+.linkedin-card {
+    background-color: white; /* White background for contrast */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Limit width for better readability */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly lower for slide effect */
+    animation: fadeInUp 1s forwards; /* Fade in and slide up */
+    animation-delay: 0.4s; /* Delay for card animation */
+}
+
+.linkedin-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.linkedin-card h2 {
+    font-size: 1.8em; /* Slightly larger heading */
+    color: #06741e; /* Dark green */
+}
+
+.linkedin-card p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+.linkedin-card a {
+    font-size: 1.2em;
+    color: #0077b5; /* LinkedIn blue */
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #0077b5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+}
+
+.linkedin-card a:hover {
+    background-color: #0077b5; /* LinkedIn blue */
+    color: white; /* Change text color on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1; /* End visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px; /* Padding for spacing */
+    background-color: #f7f7f7; /* Light background color */
+}
+
+.projects-section h2 {
+    font-size: 2.5em;
+    color: #06741e; /* Dark green */
+    margin-bottom: 40px;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+.category {
+    margin-bottom: 40px; /* Space between categories */
+}
+
+.category h3 {
+    font-size: 2em;
+    color: #004d40; /* Teal for category headings */
+    margin-bottom: 20px;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+.project {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px; /* Limit width for better readability */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px); /* Start slightly lower for slide effect */
+    animation: slideIn 0.5s forwards; /* New slide-in animation */
+}
+
+.project:nth-child(odd) {
+    animation-delay: 0.2s; /* Delay for odd projects */
+}
+
+.project:nth-child(even) {
+    animation-delay: 0.4s; /* Delay for even projects */
+}
+
+.project h4 {
+    color: #06741e; /* Dark green */
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateX(-100%); /* Start from left */
+    }
+    to {
+        opacity: 1; /* End visible */
+        transform: translateX(0); /* End at original position */
+    }
+}
