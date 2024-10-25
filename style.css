@@ -521,6 +521,27 @@ footer {
 }
 
 
+/* Hide the navbar by default on mobile */
+.navbar {
+    display: none;
+}
+
+/* Hamburger menu button */
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+/* When the screen is larger, show the normal navbar */
+@media (min-width: 769px) {
+    .navbar {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
 
 
 
