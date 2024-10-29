@@ -556,26 +556,27 @@ footer {
         text-align: center;
     }
 
-    /* Move the profile image below the text-container */
-    /* Profile container styling */
+/* Profile container styling */
 .profile-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 150px;  /* Adjust size as needed */
     height: 150px;
     border-radius: 50%;
     overflow: hidden;
     margin-top: 20px;
-    background: #ffffff;
+    background-color: #ffffff; /* Background color for visibility */
 }
 
 /* Adjust profile image to fit properly inside the circular container */
 .profile-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    object-position: center; /* Centers the image inside the circle */
 }
+
 
 }
 
