@@ -522,17 +522,42 @@ footer {
 /* Hide the menu initially on mobile */
 .nav-links {
     display: none; /* Hide links on mobile */
+
+        flex-direction: column;
+        gap: 15px;
+        background-color: #004d40;
+        padding: 20px;
+        width: 100%;
 }
 
 .menu-toggle {
     display: none; /* Hide toggle button on desktop */
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
 }
 
+
+    /* Profile image adjustments for mobile */
 @media (max-width: 768px) {
+    .profile-container {
+        width: 200px;
+        height: 200px;
+    }
+    .profile-text {
+        font-size: 1em; /* Smaller font size for mobile */
+        bottom: 5px;
+        left: 5px;
+    }
+}
+
+
     /* Show the toggle button on mobile */
     .menu-toggle {
         display: block;
-        position: absolute;
+/*         position: absolute;
         top: 20px;
         right: 20px;
         cursor: pointer;
@@ -541,14 +566,14 @@ footer {
         background-color: #004d40;
         border: none;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 5px; */
     }
 
     /* Show nav links when active */
     .nav-links.active {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+/*         flex-direction: column;
+        gap: 20px; */
     }
 
     /* Adjust the navbar on mobile */
