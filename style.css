@@ -271,8 +271,6 @@ footer {
 
 /* Contact Form Section */
 
-
-
 /* Contact Section */
 .contact-section {
     display: flex;
@@ -382,7 +380,6 @@ footer {
     background-color: #0077b5; /* LinkedIn blue */
     color: white; /* Change text color on hover */
 }
-
 /* Animations */
 @keyframes fadeInUp {
     from {
