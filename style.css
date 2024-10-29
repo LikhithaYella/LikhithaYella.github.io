@@ -540,6 +540,7 @@ footer {
 }
 
 
+/* Profile image adjustments for mobile */
 @media (max-width: 768px) {
     /* Set the hero section to column layout on mobile */
     .hero {
@@ -558,6 +559,13 @@ footer {
     /* Move the profile image below the text-container */
     .profile-container {
         order: 2;
+        margin-top: 20px;
+    }
+
+    /* Adjust profile image size for better fit on mobile */
+    .profile-image {
+        width: 150px;
+        height: auto;
     }
 }
 
