@@ -540,16 +540,24 @@ footer {
 }
 
 
-    /* Profile image adjustments for mobile */
 @media (max-width: 768px) {
-    .profile-container {
-        width: 200px;
-        height: 200px;
+    /* Set the hero section to column layout on mobile */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .profile-text {
-        font-size: 1em; /* Smaller font size for mobile */
-        bottom: 5px;
-        left: 5px;
+
+    /* Ensure text-container is above the profile-container on mobile */
+    .text-container {
+        order: 1;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Move the profile image below the text-container */
+    .profile-container {
+        order: 2;
     }
 }
 
