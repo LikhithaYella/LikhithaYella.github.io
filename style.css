@@ -557,16 +557,26 @@ footer {
     }
 
     /* Move the profile image below the text-container */
-    .profile-container {
-        order: 2;
-        margin-top: 20px;
-    }
+    /* Profile container styling */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 20px;
+    background: #ffffff;
+}
 
-    /* Adjust profile image size for better fit on mobile */
-    .profile-image {
-        width: 150px;
-        height: auto;
-    }
+/* Adjust profile image to fit properly inside the circular container */
+.profile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 }
 
 
