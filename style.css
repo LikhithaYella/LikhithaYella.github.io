@@ -1,4 +1,4 @@
-/* Resetting margins and paddings */
+   /* Resetting margins and paddings */
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ nav {
     justify-content: center; /* Center vertically */
     align-items: center; /* Aligns the items in the center */
     padding: 20px;
-    background-color: #004d40; /* Dark teal */
+    background-color:#068ad6 ; /* Dark teal */
     height: 100vh; /* Full height */
     position: fixed;
     left: 0; /* Fixed to the right */
@@ -41,6 +41,7 @@ nav .nav-links {
     display: flex;
     flex-direction: column; /* Vertical layout for links */
     gap: 20px; /* Space between the links */
+    background-color:#068ad6;
 }
 
 nav .nav-links a {
@@ -73,7 +74,7 @@ nav .nav-links a:hover {
 
 .name {
     font-size: 3em;
-    color: #067417f4;
+    color: #068ad6;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -85,7 +86,7 @@ nav .nav-links a:hover {
     align-items: center;
     background: rgba(255, 255, 255, 0.2);
     padding: 10px 20px;
-    border: 2px solid #067417f4;
+    border: 2px solid #068ad6;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: 10px 0;
@@ -137,7 +138,7 @@ nav .nav-links a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #004d40;
+    background-color: #068ad6;
     color: white;
     animation: fadeIn 2s ease-in-out;
 }
@@ -195,7 +196,7 @@ footer {
 }
 
 .about-box {
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    background: #068ad6 /* Semi-transparent white */
     padding: 30px;
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -206,7 +207,7 @@ footer {
 
 .about-box h2 {
     font-size: 2.5em;
-    color: #046b18;
+    color: #068ad6;
     margin-bottom: 20px;
 }
 
@@ -238,7 +239,7 @@ footer {
 .skills h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
-    color: #066d06;
+    color: #068ad6;
 }
 
 .skills-grid {
@@ -263,7 +264,7 @@ footer {
 
 .skill-card h3 {
     font-size: 1.5em;
-    color: #06741e;
+    color: #068ad6;
     margin-bottom: 10px;
 }
 
@@ -404,7 +405,7 @@ footer {
 
 .projects-section h2 {
     font-size: 2.5em;
-    color: #06741e; /* Dark green */
+    color: #068ad6; /* Dark green */
     margin-bottom: 40px;
     animation: fadeIn 1s forwards; /* Fade-in animation */
 }
@@ -415,7 +416,7 @@ footer {
 
 .category h3 {
     font-size: 2em;
-    color: #004d40; /* Teal for category headings */
+    color: #068ad6; /* Teal for category headings */
     margin-bottom: 20px;
     animation: fadeIn 1s forwards; /* Fade-in animation */
 }
@@ -442,7 +443,7 @@ footer {
 }
 
 .project h4 {
-    color: #06741e; /* Dark green */
+    color: #068ad6; /* Dark green */
     margin-bottom: 10px;
 }
 
@@ -614,7 +615,3 @@ footer {
         align-items: flex-start;
     }
 }
-
-
-
-
