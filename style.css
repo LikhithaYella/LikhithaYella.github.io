@@ -298,7 +298,7 @@ footer {
 
 .contact-form h2 {
     text-align: center;
-    color: #06741e; /* Dark green */
+    color: #068ad6; /* Dark green */
     margin-bottom: 20px;
     font-size: 2em; /* Increase heading size */
 }
@@ -322,7 +322,7 @@ footer {
 .contact-form button {
     width: 100%;
     padding: 12px; /* Consistent padding */
-    background-color: #067417; /* Green background */
+    background-color: #068ad6; /* Green background */
     color: white;
     border: none;
     border-radius: 8px; /* Rounded corners */
@@ -332,7 +332,7 @@ footer {
 }
 
 .contact-form button:hover {
-    background-color: #055c0d; /* Darker green on hover */
+    background-color: #068ad6; /* Darker green on hover */
     transform: scale(1.05); /* Slightly larger on hover */
 }
 
@@ -359,7 +359,7 @@ footer {
 
 .linkedin-card h2 {
     font-size: 1.8em; /* Slightly larger heading */
-    color: #06741e; /* Dark green */
+    color: #068ad6; /* Dark green */
 }
 
 .linkedin-card p {
