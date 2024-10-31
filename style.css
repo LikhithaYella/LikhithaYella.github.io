@@ -21,7 +21,7 @@ nav {
     justify-content: center; /* Center vertically */
     align-items: center; /* Aligns the items in the center */
     padding: 20px;
-    background-color:#068ad6 ; /* Dark teal */
+    background-color:#5636D3 ; /* Dark teal */
     height: 100vh; /* Full height */
     position: fixed;
     left: 0; /* Fixed to the right */
@@ -41,7 +41,7 @@ nav .nav-links {
     display: flex;
     flex-direction: column; /* Vertical layout for links */
     gap: 20px; /* Space between the links */
-    background-color:#068ad6;
+    background-color:#5636D3;
 }
 
 nav .nav-links a {
@@ -74,7 +74,7 @@ nav .nav-links a:hover {
 
 .name {
     font-size: 3em;
-    color: #068ad6;
+    color: #5636D3;
     font-weight: bold;
     text-transform: uppercase;
 }
